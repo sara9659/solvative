@@ -1,0 +1,155 @@
+body {
+  font-size: 16px;
+  color: rgb(33, 37, 41);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.search-container {
+  position: relative;
+  width: 241px;
+}
+.search-container input {
+  width: 100%;
+  height: 38px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 6px 12px 6px 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.search-container input {
+  outline: none;
+}
+.search-container input::placeholder {
+  color: rgb(150, 150, 150);
+  opacity: 1;
+}
+.search-container input:focus,
+.search-container input:active {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+.search-container input:disabled {
+  background-color: rgb(233, 236, 239);
+}
+.search-container span {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  border: 1px solid rgb(206, 212, 218);
+  font-size: 12px;
+  padding: 3px;
+  color: #979797;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.city-table-container {
+  margin-top: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.city-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.city-table-container thead {
+  border-bottom: 1px solid #030303;
+}
+
+.city-table-container th,
+.city-table-container td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.city-table-container th {
+  font-weight: 700;
+}
+.spinner-conatiner {
+  text-align: center;
+}
+.spinner-conatiner .spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #b3b3b3;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner.hidden {
+  display: none;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.pagination {
+  display: flex;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.limit-box input {
+  width: 40px;
+  margin-left: 8px;
+  text-align: center;
+}
+
+@media (min-width: 645px) and (max-width: 768px) {
+  .container {
+    max-width: 645px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .table-footer {
+    flex-direction: column;
+    align-items: end;
+  }
+  .limit-box {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solviate : City Search</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Solviate : City Search</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-box"
+            placeholder="Search places..."
+            autocomplete="off"
+            tabindex="0"
+          />
+          <span>Ctrl + /</span>
+        </div>
+      </div>
+      <div class="city-table-container">
+        <div class="spinner-conatiner">
+          <div id="spinner" class="spinner hidden"></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Place Name</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td colspan="3">Start searching</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <div class="pagination" id="pagination"></div>
+        <div class="limit-box">
+          <label for="limit">Results per page:</label>
+          <input type="number" id="limit" min="1" max="10" value="5" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
